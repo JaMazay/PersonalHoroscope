@@ -15,7 +15,7 @@ public class Application {
         }
 
         if (args[0].equals("Близнецы")) {
-            System.out.println("Нет лучшего знака зодиака, чем близнецы");
+            System.out.println(aries());//выводим на экран результат метода aries
         }
 
         if (args[0].equals("Раки")) {
@@ -72,5 +72,15 @@ public class Application {
         taurus[1] = "Вы Телец ваш гороскоп на сегодня - 2";
         index = randomTaurus.nextInt(2);
         return taurus[index];
+    }
+
+    public static String gemini (){
+        Random randomGemini = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] gemini = new String[2];//создаем массив для добавления вариантов гороскопа
+        gemini[0] = "Вы Близнецы ваш гороскоп на сегодня - 1";
+        gemini[1] = "Вы Близнецы ваш гороскоп на сегодня - 2";
+        index = randomGemini.nextInt(2);
+        return gemini[index];
     }
 }
