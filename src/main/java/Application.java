@@ -41,19 +41,19 @@ public class Application {
         }
 
         if (args[0].equals("Стрелец")) {
-            System.out.println("Не зря Вы стрелец по гороскопу, с меткостью у Вас проблем нет");
+            System.out.println(sagottarius());
         }
 
         if (args[0].equals("Козерог")) {
-            System.out.println("Слышал, что Козероги очень щедрые");
+            System.out.println(capricorn());
         }
 
         if (args[0].equals("Водолей")) {
-            System.out.println("Я случайно узнал, что Вы Водолей");
+            System.out.println(aquarius());
         }
 
         if (args[0].equals("Рыба")) {
-            System.out.println("Рыба, это отличный знак зодиака");
+            System.out.println(pisces());
         }
     }
     public static String aries (){
@@ -130,9 +130,49 @@ public class Application {
         Random randomScorpio = new Random();//создаем объект типа Random с именем randomAries
         int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
         String[] scorpio = new String[2];//создаем массив для добавления вариантов гороскопа
-        scorpio[0] = "Вы Весы, ваш гороскоп нe сегодня - 1";
-        scorpio[1] = "Вы Весы, ваш гороскоп на сегодня - 2";
+        scorpio[0] = "Вы Скорпион, ваш гороскоп нe сегодня - 1";
+        scorpio[1] = "Вы Скорпион, ваш гороскоп на сегодня - 2";
         index = randomScorpio.nextInt(2);
         return scorpio[index];
+    }
+
+    public static String sagottarius (){
+        Random randomSagottarius = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] sagottarius = new String[2];//создаем массив для добавления вариантов гороскопа
+        sagottarius[0] = "Вы Стрелец, ваш гороскоп нe сегодня - 1";
+        sagottarius[1] = "Вы Стрелец, ваш гороскоп на сегодня - 2";
+        index = randomSagottarius.nextInt(2);
+        return sagottarius[index];
+    }
+
+    public static String capricorn (){
+        Random randomCapricorn = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] capricorn = new String[2];//создаем массив для добавления вариантов гороскопа
+        capricorn[0] = "Вы Козерог, ваш гороскоп нe сегодня - 1";
+        capricorn[1] = "Вы Козерог, ваш гороскоп на сегодня - 2";
+        index = randomCapricorn.nextInt(2);
+        return capricorn[index];
+    }
+
+    public static String aquarius (){
+        Random randomAquarius = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] aquarius = new String[2];//создаем массив для добавления вариантов гороскопа
+        aquarius[0] = "Вы Водолей, ваш гороскоп нe сегодня - 1";
+        aquarius[1] = "Вы Водолей, ваш гороскоп на сегодня - 2";
+        index = randomAquarius.nextInt(2);
+        return aquarius[index];
+    }
+
+    public static String pisces (){
+        Random randomPisces = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] pisces = new String[2];//создаем массив для добавления вариантов гороскопа
+        pisces[0] = "Вы Рыба, ваш гороскоп нe сегодня - 1";
+        pisces[1] = "Вы Рыба, ваш гороскоп на сегодня - 2";
+        index = randomPisces.nextInt(2);
+        return pisces[index];
     }
 }
