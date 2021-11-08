@@ -7,11 +7,11 @@ public class Application {
         String horo = args[0];
         if (args[0].equals("Овен")) {
 
-            System.out.println(aries());
+            System.out.println(aries());//выводим на экран результат метода aries
         }
 
         if (args[0].equals("Телец")) {
-            System.out.println("Я случайно узнал, что Вы Телец");
+            System.out.println(aries());//выводим на экран результат метода aries
         }
 
         if (args[0].equals("Близнецы")) {
@@ -58,9 +58,19 @@ public class Application {
         Random randomAries = new Random();//создаем объект типа Random с именем randomAries
         int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
         String[] aries = new String[2];//создаем массив для добавления вариантов гороскопа
-        aries[0] = "Овен гороскоп1";
-        aries[1] = "Овен гороскоп2";
+        aries[0] = "Вы Овен ваш гороскоп на сегодня - 1";
+        aries[1] = "Вы Овен ваш гороскоп на сегодня - 2";
         index = randomAries.nextInt(2);
         return aries[index];
+    }
+
+    public static String taurus (){
+        Random randomTaurus = new Random();//создаем объект типа Random с именем randomAries
+        int index; //объявляем переменную index типа int для использования с методом nextIn и получения случайного значения
+        String[] taurus = new String[2];//создаем массив для добавления вариантов гороскопа
+        taurus[0] = "Вы Телец ваш гороскоп на сегодня - 1";
+        taurus[1] = "Вы Телец ваш гороскоп на сегодня - 2";
+        index = randomTaurus.nextInt(2);
+        return taurus[index];
     }
 }
